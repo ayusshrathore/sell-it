@@ -12,7 +12,7 @@ A React-Native app for selling stuffs you don't need :)
 ## Demo
 
 -   [Login & Register Screen](https://github.com/ayush-rathore/sell-it/blob/main/demo/Login%20&%20Register.mp4?raw=true)
--   [Feed, Add Post & Accounts Navigator](https://github.com/ayush-rathore/sell-it/blob/main/demo/Feed,%20Post%20&%20Account.mp4?raw=true)
+-   [Feed, Add Posts & Accounts Navigator](https://github.com/ayush-rathore/sell-it/blob/main/demo/Feed,%20Post%20&%20Account.mp4?raw=true)
 
 ## Features
 
@@ -52,7 +52,9 @@ Run the app using Expo-Client
 
 **Client:** React-Native, Expo
 
-**Server:** Node, APISauce
+**Server:** Node, APISauce, Express
+
+**Database:** MongoDB
 
 ## Feedback
 
