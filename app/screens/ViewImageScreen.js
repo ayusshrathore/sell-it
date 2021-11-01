@@ -33,7 +33,7 @@ function ViewImageScreen({ navigation, route }) {
 				</View>
 				<Image
 					resizeMode="contain"
-					source={image}
+					source={{ uri: image }}
 					style={styles.image}
 				/>
 			</View>
