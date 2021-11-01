@@ -5,13 +5,12 @@ import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 import colors from "../config/colors";
 import AppText from "../components/AppText";
-import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 function Card({ title, price, image, onPress }) {
 	return (
 		<TouchableOpacity onPress={onPress}>
 			<View style={styles.card}>
-				<Image source={image} style={styles.image} />
+				<Image source={{ uri: image }} style={styles.image} />
 				<View style={styles.details}>
 					<AppText style={styles.title}>{title}</AppText>
 					<AppText style={styles.price}>{price}</AppText>
