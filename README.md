@@ -8,6 +8,7 @@ A React-Native app for selling stuffs you don't need :)
 -   [Yup](https://www.npmjs.com/package/yup)
 -   [Formik](https://www.npmjs.com/package/formik)
 -   [APISauce](https://www.npmjs.com/package/apisauce)
+-   [Lottie](https://lottiefiles.com/)
 
 ## Demo
 
@@ -45,7 +46,7 @@ Install dependencies
 Run the app using Expo-Client
 
 ```bash
-  https://expo.dev/client
+  expo start
 ```
 
 ## Tech Stack
