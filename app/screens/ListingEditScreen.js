@@ -12,12 +12,13 @@ import {
 } from "../components/forms";
 import FormImagePicker from "../components/forms/FormImagePicker";
 import Screen from "../components/Screen";
+import listingApi from "../api/listingAPI";
 // import useLocation from "../hooks/useLocation";
-//useLocation is not working as of now. Have to fix it
+// useLocation is not working as of now. Have to fix it
 
 const validationSchema = Yup.object().shape({
 	title: Yup.string().required().min(1).label("Title"),
-	price: Yup.number().required().min(1).max(10000).label("Price"),
+	price: Yup.string().required().min(1).label("Price"),
 	description: Yup.string().label("Description"),
 	category: Yup.object().required().nullable().label("Category"),
 	images: Yup.array().min(1, "Please select aleast one image"),
@@ -32,7 +33,11 @@ const categories = [
 ];
 
 function ListingEditScreen() {
-	// const location = useLocation();
+	const handleSubmit = async (listing) => {
+		const result = await listingApi.addListings({ listing });
+		if (!result.ok) return alert(`Could not add listing`);
+		alert("success");
+	};
 	return (
 		<Screen style={styles.container}>
 			<Form
@@ -43,7 +48,7 @@ function ListingEditScreen() {
 					category: null,
 					images: [],
 				}}
-				onSubmit={(values) => console.log(values)}
+				onSubmit={handleSubmit}
 				validationSchema={validationSchema}
 			>
 				<FormImagePicker name="images" />
