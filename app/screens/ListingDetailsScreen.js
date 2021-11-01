@@ -15,7 +15,7 @@ function ListingDetailsScreen({ navigation, route }) {
 			<TouchableWithoutFeedback
 				onPress={() => navigation.navigate("ItemImage", listings.image)}
 			>
-				<Image source={listings.image} style={styles.image} />
+				<Image source={{ uri: listings.image }} style={styles.image} />
 			</TouchableWithoutFeedback>
 			<View style={styles.details}>
 				<AppText style={styles.title}>{listings.title}</AppText>
