@@ -5,7 +5,7 @@ import { FlatList, StyleSheet } from "react-native";
 import Card from "../components/Card";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import listingAPI from "../api/listingAPI";
 import AppText from "../components/AppText";
 import Button from "../components/AppButton";
@@ -40,7 +40,7 @@ function ListingScreen({ navigation }) {
 			<ActivityIndicator visible={loading} />
 			<FlatList
 				data={listings}
-				keyExtractor={(listing) => listing.id.toString()}
+				keyExtractor={(listing) => listing._id.toString()}
 				renderItem={({ item }) => (
 					<Card
 						title={item.title}
