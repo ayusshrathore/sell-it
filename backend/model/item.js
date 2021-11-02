@@ -1,9 +1,6 @@
 const mongoose = require("mongoose");
 
 const itemSchema = new mongoose.Schema({
-	id: {
-		type: Number,
-	},
 	title: {
 		type: String,
 		required: true,
@@ -14,7 +11,7 @@ const itemSchema = new mongoose.Schema({
 	},
 	image: {
 		type: String,
-		// required: true,
+		required: true,
 	},
 });
 
