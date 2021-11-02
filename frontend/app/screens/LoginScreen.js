@@ -7,14 +7,25 @@ import * as Yup from "yup";
 import {
 	AppForm,
 	AppFormField,
+	ErrorMessage,
 	SubmitButton,
 } from "../components/forms/index.js";
+import authApi from "../api/auth";
+import { useState } from "react";
 
 const validationSchema = Yup.object().shape({
 	email: Yup.string().required().email().label("Email"),
 	password: Yup.string().required().min(4).label("Password"),
 });
 function LoginScreen(props) {
+	const [loginFailed, setLoginFailed] = useState(false);
+
+	const handleSubmit = async ({ email, password }) => {
+		const result = await authApi.login(email, password);
+		if (!result.ok) return setLoginFailed(true);
+		setLoginFailed(false);
+		console.log(result.data);
+	};
 	return (
 		<Screen style={styles.container}>
 			<Image
@@ -23,11 +34,13 @@ function LoginScreen(props) {
 			/>
 			<AppForm
 				initialValues={{ email: "", password: "" }}
-				onSubmit={(values) =>
-					console.log(values.email, values.password)
-				}
+				onSubmit={handleSubmit}
 				validationSchema={validationSchema}
 			>
+				<ErrorMessage
+					error="Invalid email or password"
+					visible={loginFailed}
+				/>
 				<AppFormField
 					placeholder="Email"
 					icon="email"
