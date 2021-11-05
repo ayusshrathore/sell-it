@@ -30,3 +30,13 @@ exports.loginUser = (req, res) => {
 			return res.status(500).send(err);
 		});
 };
+
+exports.getUsers = (req, res) => {
+	User.findOne()
+		.then((users) => {
+			if (users) return res.status(200).send(users);
+		})
+		.catch((err) => {
+			res.status(500).send(err);
+		});
+};
