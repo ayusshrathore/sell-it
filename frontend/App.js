@@ -1,5 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
-import React from "react";
+import React, { useState } from "react";
 import AuthContext from "./app/auth/context";
 import OfflineStatus from "./app/components/OfflineStatus";
 import AppNavigator from "./app/navigation/AppNavigator";
@@ -11,7 +11,7 @@ function App() {
 	const [user, setUser] = useState();
 	const [ready, setReady] = useState(false);
 
-	if (!ready) return <AppLoading onFinish={() => setReady(true)} />;
+	// if (!ready) return <AppLoading onFinish={() => setReady(true)} />;
 
 	return (
 		<AuthContext.Provider value={{ user, setUser }}>
