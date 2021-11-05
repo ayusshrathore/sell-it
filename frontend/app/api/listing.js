@@ -1,8 +1,8 @@
 import client from "./client";
 
-const getListings = () => client.get("/listing");
+const getListings = () => client.get("/listings");
 
-const addListings = (listing) => {
+const addListing = (listing) => {
 	const data = new FormData();
 	data.append("title", listing.title);
 	data.append("price", listing.price);
@@ -20,4 +20,4 @@ const addListings = (listing) => {
 	return client.post("/listing/add", data);
 };
 
-export default { addListings, getListings };
+export default { addListing, getListings };
