@@ -1,3 +1,4 @@
 frontend/node_modules
 frontend/.expo
+frontend/.expo-shared
 backend/node_modules
