@@ -1,0 +1,17 @@
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+
+const useAuth = () => {
+	const { user, setUser } = useContext(AuthContext);
+
+	const logIn = (data) => {
+		setUser(data);
+	};
+
+	const logOut = () => {
+		setUser(null);
+	};
+	return { user, logIn, logOut };
+};
+
+export default useAuth;
