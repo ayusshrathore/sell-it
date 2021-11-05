@@ -16,6 +16,7 @@
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/stack": "^6.0.7",
     "apisauce": "^2.1.2",
+    "dayjs": "^1.10.7",
     "expo": "~42.0.1",
     "expo-cli": "^4.11.0",
     "expo-constants": "^11.0.1",
