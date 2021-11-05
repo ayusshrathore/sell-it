@@ -13,7 +13,7 @@ import {
 } from "../components/forms";
 import FormImagePicker from "../components/forms/FormImagePicker";
 import Screen from "../components/Screen";
-import listingApi from "../api/listingAPI";
+import listingApi from "../api/listing";
 import UploadScreen from "./UploadScreen";
 // import useLocation from "../hooks/useLocation";
 // useLocation is not working as of now. Have to fix it

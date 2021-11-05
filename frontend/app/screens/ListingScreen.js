@@ -6,7 +6,7 @@ import Card from "../components/Card";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
 import { useEffect } from "react";
-import listingAPI from "../api/listingAPI";
+import listingAPI from "../api/listing";
 import AppText from "../components/AppText";
 import Button from "../components/AppButton";
 import ActivityIndicator from "../components/ActivityIndicator";
