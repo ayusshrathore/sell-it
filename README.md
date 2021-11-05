@@ -24,6 +24,14 @@ A React-Native app for selling stuffs you don't need :)
 -   Push notifications
 -   (More coming soon...)
 
+## Environment Variables
+
+To run this project, you'll need to edit the following environment variables in `/backend/.env`
+
+`PORT`
+
+`MONGO_URI`
+
 ## Run Locally
 
 Clone the project
