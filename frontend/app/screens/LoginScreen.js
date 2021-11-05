@@ -1,6 +1,6 @@
 //Login Screen
 
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Image } from "react-native";
 import Screen from "../components/Screen";
 import * as Yup from "yup";
@@ -11,13 +11,14 @@ import {
 	SubmitButton,
 } from "../components/forms/index.js";
 import authApi from "../api/auth";
-import { useState } from "react";
+import useAuth from "../auth/useAuth";
 
 const validationSchema = Yup.object().shape({
 	email: Yup.string().required().email().label("Email"),
 	password: Yup.string().required().min(4).label("Password"),
 });
-function LoginScreen(props) {
+function LoginScreen() {
+	const { logIn } = useAuth();
 	const [loginFailed, setLoginFailed] = useState(false);
 
 	const handleSubmit = async ({ email, password }) => {
@@ -25,6 +26,7 @@ function LoginScreen(props) {
 		if (!result.ok) return setLoginFailed(true);
 		setLoginFailed(false);
 		console.log(result.data);
+		logIn(result.data);
 	};
 	return (
 		<Screen style={styles.container}>
