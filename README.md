@@ -17,10 +17,11 @@ A React-Native app for selling stuffs you don't need :)
 
 ## Features
 
--   Add Images via File Manager
 -   Cross platform
 -   In-App Chat Features
 -   Realtime Location for Products
+-   Offline support
+-   Push notifications
 -   (More coming soon...)
 
 ## Run Locally
