@@ -23,7 +23,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/logo-red.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.freaker.sellIt",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./app/assets/logo-red.png"
