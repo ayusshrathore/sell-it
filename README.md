@@ -9,11 +9,11 @@ A React-Native app for selling stuffs you don't need :)
 -   [Formik](https://www.npmjs.com/package/formik)
 -   [APISauce](https://www.npmjs.com/package/apisauce)
 -   [Lottie](https://lottiefiles.com/)
+-   [DayJS](https://day.js.org/)
 
 ## Demo
 
--   [Login & Register Screen](https://github.com/ayush-rathore/sell-it/blob/main/demo/Login%20&%20Register.mp4?raw=true)
--   [Feed, Add Posts & Accounts Navigator](https://github.com/ayush-rathore/sell-it/blob/main/demo/Feed,%20Post%20&%20Account.mp4?raw=true)
+-   [App Demo](https://github.com/ayush-rathore/sell-it/raw/main/demo/video_2021-11-05_17-59-58.mp4)
 
 ## Features
 
