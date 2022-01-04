@@ -1,6 +1,13 @@
-# Sell-It
+<p align="center">
+    <a href="https://expo.dev/@freaker/sell-it">
+        <img src="frontend/app/assets/logo-red.png" width="100" alt="Sell-it Logo"/>
+    </a>
+    <h1 align="center"> Sell-it </h1>
+</p>
 
-A React-Native app for selling stuffs you don't need :)
+<p align="center">
+  A marketplace app built using <strong>React-Native</strong> and <strong>Expo CLI</strong>.
+</p>
 
 ## Acknowledgements
 
@@ -17,12 +24,11 @@ A React-Native app for selling stuffs you don't need :)
 
 ## Features
 
--   Cross platform
+-   Cross platform (Android / iOS)
 -   In-App Chat Features
--   Realtime Location for Products
--   Offline support
+-   Real-time Location for Products
+-   Offline support (Caching)
 -   Push notifications
--   (More coming soon...)
 
 ## Environment Variables
 
